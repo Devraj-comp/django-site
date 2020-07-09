@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>this is contact page</h1>
+	<p>{{my_text}},{{my_number}},{{my_list}}</p>
+
+<ul>
+	<li>item 1</li>
+	<li>item 2</li>
+
+
+</ul>
+<ul>
+	{% for sub_item in my_list %}
+		{% if sub_item == 123 %}
+			<li>{{forloop.counter}} - {{sub_item|add:111}}</li>
+		{% else %}
+			<li>{{forloop.counter}} - {{sub_item}}</li>
+		{% endif %}	
+	{% endfor %}
+</ul>
+
+
+
+<p>good to see you</p>
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Django Coding</h1>
+  <p class="lead">Learning Django coding for simple design of website along Register,Login and Logout features.</p>
+</div>
+
+
+<div class='container'>
+	<div class="d-flex flex-column">
+		<h4>Registered Users:</h4>
+		{% for account in accounts %}
+
+			<p>{{account}}</p>
+
+		{% endfor %}	
+	</div>
+</div>
+
+{% endblock %}

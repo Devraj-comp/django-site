@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Welcome TO Our School.</h2>
+<h3>Our Staffs:</h3>
+
+	{% for account in accounts %}
+		<a>{{account}}</a>
+	{% endfor %}
+
+{% endblock %}
