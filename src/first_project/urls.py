@@ -16,20 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from product.views import home_screen_view
+from account.views import home_screen_view
 from django.conf.urls.static import static
 from django.conf import settings
-#from pages.views import home_view,contact_view
-#from product.views import product_detail_view,product_create_view,dynamic_lookup_view,home_screen_view,product_delete_view,product_list_view
-#from .views import ArticleListView,ArticleDetailView
-#app_name='article'
+
 from account.views import registration_view,logout_view,login_view,account_view
 urlpatterns = [
-    #path('',home_view, name='home'),
-    # path('contact/',contact_view),
-    # path('product/',product_detail_view),
+   
      path('',home_screen_view,name='home'),
-    # path('create/',product_create_view),
      path('register/',registration_view,name='register'),
      path('logout/',logout_view,name='logout'),
      path('login/',login_view,name='login'),
