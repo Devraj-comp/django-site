@@ -1,6 +1,15 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import login,authenticate,logout
+from account.models import Account
 from account.forms import RegistrationForm,AccountAuthenticationForm,AccountUpdateForm	
+
+def home_screen_view(request):
+	context ={}
+	#print(request.headers)
+	accounts=Account.objects.all()
+	context["accounts"]=accounts
+	return render(request,"home.html",context)
+
 
 def registration_view(request):
 	context={}
