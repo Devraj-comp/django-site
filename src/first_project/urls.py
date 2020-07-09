@@ -30,10 +30,6 @@ urlpatterns = [
      path('account/',account_view,name='account'),
      path('admin/', admin.site.urls)
 
- 
-    #path('product/',product_list_view,name='product-list'),
- #   path('',ArticleListView.as_view(),name='article-list'),
-  #  path('<int:pk/',ArticleDetailView.as_view(),name='article-detail')
 
     
 ]
